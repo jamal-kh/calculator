@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "digit-numeric";
+}
+
+:root{
+    --btn-square-size:50px;
+    --btn-space : 5px
+}
+body {
+    background: #6441A5;
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);
+    background: linear-gradient(to right, #2a0845, #6441A5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Dosis" , sans-serif;
+}
+
+
+.Calculator {
+    width: 250px;
+    min-width: 200px;
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+    background-color: transparent;
+    padding: 20px ;
+    text-align: end;
+}
+
+.Calculator .Calculate-input{
+    width: 100%;
+    padding: 10px 5px 10px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px ;
+}
+
+
+.Calculator .Calculate-input input[type="text"]{
+    width: inherit;
+    font-size: 25px;
+    font-weight: bold;
+    resize: none;
+    outline:none;
+    border: none;
+    text-align: end;
+}
+
+
+.Calculator .Calculate-btns{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4 , calc(100% / 4));
+    grid-template-rows: repeat(5 , calc(100% / 5) );
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.Calculator .Calculate-btns .numbers{
+    grid-area: 2 / 1 /  6 / 4 ;
+    display: grid;
+    grid-template-columns: repeat(3 , calc(100% / 3));
+    grid-template-rows: repeat(4 , calc(100% / 4));
+    padding: 0;
+    gap: 1px;
+}
+
+button{
+    width: var(--btn-square-size);
+    height: var(--btn-square-size);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.equal-btn{
+    grid-row: 4 / span  ;
+    height: calc((var(--btn-square-size) + var(--btn-space)) * 2);
+}
+
+
+.zero-btn{
+    grid-column: 1 / span 2 ; 
+    width: calc((var(--btn-square-size) + var(--btn-space) + 2px) * 2);
+}
